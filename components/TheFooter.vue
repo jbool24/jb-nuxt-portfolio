@@ -20,7 +20,7 @@
               i.fa.fa-linkedin.fa-1x
                 span Linkedin
           li
-            a(target="_blank" title="Twitter" href="http://www.twitter.com/jbellero")
+            a(target="_blank" title="Twitter" href="http://www.twitter.com/jbool24")
               i.fa.fa-twitter.fa-1x
                 span Twitter
         <!--End of Social Icons in Footer-->
