@@ -18,12 +18,17 @@
         TheNavbar
 
         IndexHero(v-if="$route.path === '/'")
+        div#foldLine(aria-hidden='true')
 
       nuxt
 
-    TheFooter
+      TheFooter
 
-    div(class="bottombox")
+    a#scrollUp(
+      style="z-index:999;",
+      class="fixed overflow-hidden animated",
+      :class="{ fadeIn: showScroller, invisible: !showScroller }" @click="scrollToTop")
+
 </template>
 <script>
 import TheNavbar from '~/components/TheNavbar.vue'
@@ -37,7 +42,8 @@ export default {
   },
   data() {
     return {
-      loading: false
+      loading: false,
+      showScroller: false
     }
   },
   computed: {
@@ -47,6 +53,31 @@ export default {
       }
     },
     showPreloader: () => 'false'
+  },
+  mounted() {
+    if (
+      'IntersectionObserver' in window &&
+      'IntersectionObserverEntry' in window &&
+      'intersectionRatio' in window.IntersectionObserverEntry.prototype
+    ) {
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].boundingClientRect.y < 0) {
+          document.body.classList.add('pastFold')
+          this.showScroller = true
+        } else {
+          document.body.classList.remove('pastFold')
+          this.showScroller = false
+        }
+      })
+      observer.observe(document.querySelector('#foldLine'))
+    }
+  },
+  methods: {
+    scrollToTop(e) {
+      e.preventDefault()
+      if (process.client)
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    }
   }
 }
 </script>
