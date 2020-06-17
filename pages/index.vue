@@ -1,5 +1,5 @@
 <template lang="pug">
-  main
+  main#content
     AboutMe
     Technologies
 
