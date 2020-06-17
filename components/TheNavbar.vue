@@ -33,13 +33,29 @@
           li: nuxt-link(to='/contact') contact
           //- li(v-if="user.isAuthenticated"): a(href='/app/logout') Sign Out
           //- li(v-else): a(href='/app') Sign In
-
-      #nav-trigger: span
-      nav#nav-mobile
+      #nav-trigger: span(@click="isNavOpen = !isNavOpen")
+      nav#nav-mobile(class="sm:invisible")
+        ul(:class="{nav__open: navOpen}")
+          li: nuxt-link(to='/') home
+          li: a(href='javascript:void(0);' data-id="about" @click="goToElem") about
+          li: a(href='javascript:void(0);' data-id="technology" @click="goToElem") technology
+          li: nuxt-link(to='/contact') contact
+          //- li(v-if="user.isAuthenticated"): a(href='/app/logout') Sign Out
+          //- li(v-else): a(href='/app') Sign In
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      isNavOpen: false
+    }
+  },
+  computed: {
+    navOpen() {
+      return this.isNavOpen
+    }
+  },
   methods: {
     goToElem(e) {
       e.preventDefault()
