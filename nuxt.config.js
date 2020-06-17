@@ -4,7 +4,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: "Hello | I'm Justin Bellero",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -24,7 +24,8 @@ module.exports = {
    ** Global CSS
    */
   css: [
-    '@/static/styles/site.css',
+    '@/assets/sass/site.scss',
+    // '@/static/styles/site.css',
     '@static/styles/namari-color.css',
     '@static/styles/font-awesome.min.css',
     '@static/styles/animate.css'
@@ -32,7 +33,10 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/vue-scroll-reveal.client-only', mode: 'client' }],
+  plugins: [
+    { src: '~/plugins/vue-scroll-reveal.client-only', mode: 'client' },
+    { src: '~/plugins/vue-formulate' }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
