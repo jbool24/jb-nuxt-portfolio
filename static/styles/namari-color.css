@@ -130,6 +130,13 @@ a:hover,
   background-size: cover;
 }
 
+@media screen (max-width: 812px) {
+  #banner {
+    background: url('/images/banner-images/banner-image_mobile.jpg') no-repeat
+      center top;
+    background-size: cover;
+  }
+}
 /*------------------------------------------------------------------------------------------*/
 /* 5. Typography */
 /*------------------------------------------------------------------------------------------*/
