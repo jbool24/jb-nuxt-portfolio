@@ -1,10 +1,10 @@
 <template lang="pug">
-section#about.scrollto.clearfix
-  .row.clearfix
+section#about
 
+  div(class="flex flex-wrap px-4 mt-10")
     //- Content Left Side
-    .col-3
-      blockquote.testimonial.text-right.bigtest
+    div(class="hidden md:block lg:w-1/3 px-6")
+      blockquote.text-right
         q
          | It is paradoxical, yet true, to say, that the more we know, the
          | more ignorant we become in the absolute sense, for it is only
@@ -12,45 +12,46 @@ section#about.scrollto.clearfix
          | limitations. Precisely one of the most gratifying results of
          | intellectual evolution is the continuous opening up of new and
          | greater prospects.
-        footer — Nikola Tesla
+        footer.pt-4 — Nikola Tesla
       //- End Content Left Side-->
 
-    //- Content of the Right Side
-    .col-2-3
-      .section-heading
-        h3 ABOUT ME
-        h2.section-title Some More Inside Info
+      //- Content of the Right Side
+    div(class="w-full mt-10 lg:w-2/3 lg:p-0 lg:mt-0")
+      div(class="")
+        h3(class="pt-0 text-lg text-gray-500") ABOUT ME
+        h2(class="") Some More Inside Info
         p.section-subtitle
           | "I rather spend an eternity improving the things I have the power
           | to change than one second on the things that I cannot."
-        p(style='text-align: right').section-subtitle — Myself
+        p(class="mr-10 pt-4 text-right") — Myself
 
-      br
+      div(class="mt-10")
+        p
+          | I started programming almost {{programmingSince}} years ago out of a
+          | desire to make my life easier by convincing a computer to do the "dirty"
+          | work. I'm almost entirely self taught and it has taken me long time to collect
+          | and cultivate the skills I have today. I took a few classes in college and spent a lot
+          | of time tweaking web pages, customizing my favorite programs, and even
+          | scripting my operating system to perform all the magic I wanted.
+          | That process of curiosity and self discovery, constantly hacking and
+          | breaking things to understand how they worked, taught me a great deal
+          | more that I would've imagined.
+        br
 
-      p
-        | I started programming almost {{programmingSince}} years ago out of a
-        | desire to make my life easier by convincing a computer to do the "dirty"
-        | work. I'm almost entirely self taught and it has taken me long time to collect
-        | and cultivate the skills I have today. I took a few classes in college and spent a lot
-        | of time tweaking web pages, customizing my favorite programs, and even
-        | scripting my operating system to perform all the magic I wanted.
-        | That process of curiosity and self discovery, constantly hacking and
-        | breaking things to understand how they worked, taught me a great deal
-        | more that I would've imagined.
+        p
+          | My introduction to programming began with Object-Oriented styles using
+          | Python and Java. I'm always looking to expand my
+          | language scope because I really believe that being a polyglot, helps
+          | programmers analyze problems in more detailed and complete ways.
+          | I've dabbled in Java, messed around with Rust, scanned through C++,
+          | but today I work mostly in Javascript/Node.js and Python 3.
+        br
 
-      p
-        | My introduction to programming began with Object-Oriented styles using
-        | Python and Java. I'm always looking to expand my
-        | language scope because I really believe that being a polyglot, helps
-        | programmers analyze problems in more detailed and complete ways.
-        | I've dabbled in Java, messed around with Rust, scanned through C++,
-        | but today I work mostly in Javascript/Node.js and Python 3.
-
-      p
-        | Right now I'm living in sunny West Florida and spend a good amount
-        | of time persuing a good work/life balance. In my free time I enjoy meditation
-        | practicing yoga at least once a week, and spending quality time with friends.
-        | Mind/body balance is very important to me and a key part of my personal productivity.
+        p
+          | Right now I'm living in sunny West Florida and spend a good amount
+          | of time persuing a good work/life balance. In my free time I enjoy meditation
+          | practicing yoga at least once a week, and spending quality time with friends.
+          | Mind/body balance is very important to me and a key part of my personal productivity.
 
       //- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
 

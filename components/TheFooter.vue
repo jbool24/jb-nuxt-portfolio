@@ -31,4 +31,18 @@
 export default {}
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped>
+#landing-footer {
+  p,
+  a {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+  }
+  /* Footer Icon Color */
+  i {
+    color: #999;
+  }
+}
+</style>

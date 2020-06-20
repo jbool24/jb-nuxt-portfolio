@@ -123,16 +123,16 @@ a:hover,
 /*------------------------------------------------------------------------------------------*/
 
 /* Banner Background and Text Colors */
-
 #banner {
-  background: url('/images/banner-images/banner-image-03.jpg') no-repeat center
-    top;
+  background: url('/images/banner-images/banner-image_mobile.jpg') no-repeat
+    center top;
   background-size: cover;
+  opacity: 0.8;
 }
 
-@media screen (max-width: 812px) {
+@media (min-width: 1024px) {
   #banner {
-    background: url('/images/banner-images/banner-image_mobile.jpg') no-repeat
+    background: url('/images/banner-images/banner-image-03.jpg') no-repeat
       center top;
     background-size: cover;
   }
@@ -181,6 +181,7 @@ body {
   font-size: 18px;
   font-weight: 300;
   color: #111;
+  background-color: rgba(238, 238, 238, 0.8);
 }
 
 /* Section Title and Subtitle */

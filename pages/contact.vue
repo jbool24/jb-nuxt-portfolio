@@ -1,48 +1,47 @@
 <template lang="pug">
   main#content(style="margin-top:71px;")
-    div.no-padding-top.row.clearfix
 
-      div(v-if="enquirySubmitted")
-        h3 Thanks for getting in touch.
-        a(href="/") Take me back
+    div(v-if="enquirySubmitted")
+      h3 Thanks for getting in touch.
+      nuxt-link(to="/") Take me back
 
-      div.row(v-else): div(class="w-full sm:w-1/2")
-        h1 Get In Touch!
-        FormulateForm(
-          v-model="formData",
-          @submit="submitHandler")
-          FormulateInput(
-            type="text"
-            label="Name"
-            name="contact"
-            validation="required"
-            error-behavior="blur")
-          FormulateInput(
-            type="email"
-            label="Email"
-            name="email"
-            validation="required|email"
-            error-behavior="blur")
-          FormulateInput(
-            type="text"
-            label="Phone"
-            name="phone"
-            error-behavior="blur")
-          FormulateInput(
-            type="select"
-            name="enquiryType"
-            :options="messageTypes"
-            validation="required"
-            placeholder="Select an option"
-            label="What are you contacting us about?")
-          FormulateInput(
-            type="textarea"
-            label="Message"
-            name="message")
-          FormulateInput(
-            type="submit"
-            class="button text-center pt-2"
-            label="Send")
+    div(v-else): div(class="w-full sm:w-1/2")
+      h1 Get In Touch!
+      FormulateForm(
+        v-model="formData",
+        @submit="submitHandler")
+        FormulateInput(
+          type="text"
+          label="Name"
+          name="contact"
+          validation="required"
+          error-behavior="blur")
+        FormulateInput(
+          type="email"
+          label="Email"
+          name="email"
+          validation="required|email"
+          error-behavior="blur")
+        FormulateInput(
+          type="text"
+          label="Phone"
+          name="phone"
+          error-behavior="blur")
+        FormulateInput(
+          type="select"
+          name="enquiryType"
+          :options="messageTypes"
+          validation="required"
+          placeholder="Select an option"
+          label="What are you contacting us about?")
+        FormulateInput(
+          type="textarea"
+          label="Message"
+          name="message")
+        FormulateInput(
+          type="submit"
+          class="button text-center pt-2"
+          label="Send")
 </template>
 
 <script>
@@ -53,6 +52,7 @@ export default {
       validationErrors: {
         name: null
       },
+      submitted: false,
       messageTypes: {
         first: 'Just leaving a message',
         second: "I've got a question",
@@ -72,7 +72,7 @@ export default {
   },
   computed: {
     enquirySubmitted() {
-      return false
+      return this.submitted
     }
   },
   methods: {

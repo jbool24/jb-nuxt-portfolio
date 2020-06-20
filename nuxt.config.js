@@ -25,8 +25,6 @@ module.exports = {
    */
   css: [
     '@/assets/sass/site.scss',
-    // '@/static/styles/site.css',
-    '@static/styles/namari-color.css',
     '@static/styles/font-awesome.min.css',
     '@static/styles/animate.css'
   ],
