@@ -17,7 +17,7 @@ section#about
 
       //- Content of the Right Side
     div(class="w-full mt-10 lg:w-2/3 lg:p-0 lg:mt-0")
-      div(class="")
+      div(class="section-heading")
         h3(class="pt-0 text-lg text-gray-500") ABOUT ME
         h2(class="") Some More Inside Info
         p.section-subtitle

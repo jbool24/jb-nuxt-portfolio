@@ -160,6 +160,9 @@ a:hover,
 .pricing-block-content:hover {
   border-color: #d2b356;
 }
+.section-header {
+  color: #858585;
+}
 
 .button,
 input[type='submit'] {

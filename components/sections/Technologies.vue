@@ -1,7 +1,7 @@
 <template lang="pug">
-section#technology.scrollto.clearfix
- .row.extra-big-padding-bottom.clearfix
-  .col-3
+section#technology(class="mt-20 px-4 lg:px-10")
+ .flex.flex-wrap
+  div(class="w-full lg:w-1/3")
    .section-heading
     h3 TECHNOLOGY
     h2.section-title Tools Of My Tech-Stack
@@ -14,9 +14,9 @@ section#technology.scrollto.clearfix
     a(href="https://github.com/jbool24" class="button")
       i.fa.fa-github(aria-hidden="true") &nbsp;My Projects
 
-  .col-2-3
+  div(class="flex flex-wrap w-full lg:w-2/3")
    //- Icon Block
-   .col-2.icon-block.icon-top.fadeInUp(v-scroll-reveal.clean="{delay: 100, origin: 'bottom', distance: '70px'}")
+   div(class="w-full px-4 py-10 lg:w-1/2", v-scroll-reveal.clean="{delay: 100, origin: 'bottom', distance: '70px'}")
     //- Icon
     .icon: i.fa.fa-html5.fa-4x
     //- Icon Block Description
@@ -29,7 +29,7 @@ section#technology.scrollto.clearfix
    //- End of Icon Block
 
    //- Icon Block-->
-   .col-2.icon-block.icon-top.fadeInUp(v-scroll-reveal.clean="{delay: 300, origin: 'bottom', distance: '70px'}")
+   div(class="w-full px-4 py-10 lg:w-1/2", v-scroll-reveal.clean="{delay: 300, origin: 'bottom', distance: '70px'}")
     //- Icon
     .icon: i.fa.fa-linux.fa-4x
     //- Icon Block Description
@@ -46,7 +46,7 @@ section#technology.scrollto.clearfix
    //- End of Icon Block
 
    //- Icon Block
-   .col-2.icon-block.icon-top.fadeInUp(v-scroll-reveal.clean="{delay: 500, origin: 'bottom', distance: '70px'}")
+   div(class="w-full px-4 py-10 lg:w-1/2", v-scroll-reveal.clean="{delay: 500, origin: 'bottom', distance: '70px'}")
     //- Icon
     .icon: i.fa.fa-server.fa-4x
     //- Icon Block Description
@@ -62,7 +62,7 @@ section#technology.scrollto.clearfix
     //- End of Icon Block
 
    <!--Icon Block-->
-   .col-2.icon-block.icon-top.fadeInUp(v-scroll-reveal.clean="{delay: 900, origin: 'bottom', distance: '70px'}")
+   div(class="w-full px-4 py-10 lg:w-1/2", v-scroll-reveal.clean="{delay: 900, origin: 'bottom', distance: '70px'}")
     //- Icon
     .icon: i.fa.fa-database.fa-4x
     //- Icon Block Description
