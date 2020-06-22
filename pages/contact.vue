@@ -76,7 +76,15 @@ export default {
   },
   methods: {
     submitHandler(data) {
+      console.log('submitted')
       console.log(this.$axios, data)
+      const endpoint = process.env.SUBMIT_ENDPOINT || 'http://localhost:8888/'
+      this.$axios
+        .post(endpoint, data)
+        .then((d) => {
+          this.submitted = true
+        })
+        .catch((e) => console.error(e))
     }
   },
   head: {
