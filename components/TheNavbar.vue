@@ -64,13 +64,17 @@ export default {
     goToElem(e) {
       e.preventDefault()
       if (process.client) {
-        const el = document.getElementById(e.target.dataset.id)
-        const { y: ypos } = el.getBoundingClientRect()
-        window.scrollTo({
-          top: ypos,
-          left: 0,
-          behavior: 'smooth'
-        })
+        if (this.$route.name !== 'index') {
+          this.$router.push(`/#${e.target.dataset.id}`)
+        } else {
+          const el = document.getElementById(e.target.dataset.id)
+          const { y: ypos } = el.getBoundingClientRect()
+          window.scrollTo({
+            top: ypos,
+            left: 0,
+            behavior: 'smooth'
+          })
+        }
       }
     }
   }
