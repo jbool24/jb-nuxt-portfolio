@@ -1,6 +1,10 @@
 module.exports = {
   mode: 'universal',
   target: 'static',
+  publicRuntimeConfig: {
+    SUBMIT_ENDPOINT: '/.netlify/functions/submit-email'
+  },
+  privateRuntimeConfig: {},
   /*
    ** Headers of the page
    */

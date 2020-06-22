@@ -71,20 +71,12 @@ export default {
   },
   computed: {
     enquirySubmitted() {
-      return this.submitted
+      return this.$store.state.emails.mailsubmitted
     }
   },
   methods: {
     submitHandler(data) {
-      console.log('submitted')
-      console.log(this.$axios, data)
-      const endpoint = process.env.SUBMIT_ENDPOINT || 'http://localhost:8888/'
-      this.$axios
-        .post(endpoint, data)
-        .then((d) => {
-          this.submitted = true
-        })
-        .catch((e) => console.error(e))
+      this.$store.dispatch('emails/SEND_EMAIL', data)
     }
   },
   head: {
