@@ -1,5 +1,6 @@
 module.exports = {
   mode: 'universal',
+  target: 'static',
   /*
    ** Headers of the page
    */
@@ -25,7 +26,6 @@ module.exports = {
    */
   css: [
     '@/assets/sass/site.scss',
-    '@/assets/sass/formulate.scss',
     '@static/styles/font-awesome.min.css',
     '@static/styles/animate.css'
   ],
