@@ -1,5 +1,5 @@
 <template lang="pug">
-section#about
+section#about(class="mt-20 px-4 lg:px-10")
 
   div(class="flex flex-wrap px-4 mt-10")
     //- Content Left Side

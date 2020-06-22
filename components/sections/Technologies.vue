@@ -1,5 +1,5 @@
 <template lang="pug">
-section#technology(class="mt-20 px-4 lg:px-10")
+section#technology(class="mt-20 px-4 lg:px-10 lg:mt-32")
  .flex.flex-wrap
   div(class="w-full lg:w-1/3")
    .section-heading
@@ -34,9 +34,9 @@ section#technology(class="mt-20 px-4 lg:px-10")
     .icon: i.fa.fa-linux.fa-4x
     //- Icon Block Description
     .icon-block-description
-     h4 I
+     h4 I&nbsp;
       i.fa.fa-heart
-      span  Linux
+      span &nbsp;Linux
      p
       | It was love at first boot-up. I also use macOS but ever
       | since I met Linux 10 years ago I knew I found my favorite toy. I

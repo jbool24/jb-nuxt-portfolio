@@ -1,9 +1,9 @@
 <template lang="pug">
   section#banner-content
     div(class="w-full md:w-2/3 lg:w-2/4 mx-auto md:mx-4")
-      div(class="mx-2 lg:ml-10 mt-20 sm:mt-64 md:mt-0 pb-4").heading
+      div(class="mx-2 mt-20 pb-4 lg:ml-10 sm:mt-64 md:mt-0").heading
         h1(class="pb-0") HELLO!
-        h1 I'M...
+        h1(class="font-sm") I'M...
           | <br/>
           | JUSTIN BELLERO
         h2(class="p-2")
@@ -39,10 +39,13 @@ section#banner-content {
 
   h1 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 62px;
+    font-size: 3rem;
     line-height: 60px;
     font-weight: 800;
     color: #111;
+    @screen sm {
+      font-size: 62px;
+    }
   }
   h2 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
