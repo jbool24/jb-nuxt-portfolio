@@ -25,6 +25,7 @@ module.exports = {
    */
   css: [
     '@/assets/sass/site.scss',
+    '@/assets/sass/formulate.scss',
     '@static/styles/font-awesome.min.css',
     '@static/styles/animate.css'
   ],

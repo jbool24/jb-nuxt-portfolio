@@ -45,7 +45,6 @@
 </template>
 
 <script>
-import '@/assets/sass/formulate.scss'
 export default {
   data() {
     return {
