@@ -2,6 +2,9 @@
   command = "yarn export"
   functions = "functions/"
 
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
 [dev]
   framework = "#custom"
   command = "yarn export && yarn serve" # Command to start your dev server
