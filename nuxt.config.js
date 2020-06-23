@@ -5,9 +5,6 @@ module.exports = {
     SUBMIT_ENDPOINT: '/.netlify/functions/submit-email'
   },
   privateRuntimeConfig: {},
-  /*
-   ** Headers of the page
-   */
   head: {
     title: "Hello | I'm Justin Bellero",
     meta: [
@@ -21,21 +18,11 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
   css: [
     '@/assets/sass/site.scss',
     '@static/styles/font-awesome.min.css',
     '@static/styles/animate.css'
   ],
-  /*
-   ** Plugins to load before mounting the App
-   */
   plugins: [
     { src: '~/plugins/vue-scroll-reveal.client-only', mode: 'client' },
     { src: '~/plugins/vue-formulate' }
@@ -61,7 +48,16 @@ module.exports = {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseUrl: '/'
+    // proxy: true
+  },
+  // proxy: {
+  //   '/.netlify/functions/submit-email': {
+  //     target: 'http://localhost:8888',
+  //     pathRewrite: { '^/api/': '/.netlify/functions/' }
+  //   }
+  // },
   /*
    ** Build configuration
    */

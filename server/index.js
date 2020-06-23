@@ -26,6 +26,9 @@ async function start() {
   fastify.use(nuxt.render)
 
   fastify.listen(port, host, (err, address) => {
+    console.log('-'.repeat(79))
+    console.log(`Running server on ${address}`)
+    console.log('-'.repeat(79))
     if (err) {
       fastify.log.error(err)
       process.exit(1)

@@ -1,11 +1,11 @@
 export const state = () => ({
-  mailsummited: false,
+  mailSubmitted: false,
   hasError: ''
 })
 
 export const mutations = {
   submit(state) {
-    state.mailsummited = true
+    state.mailSubmitted = true
   },
   hasError(state, error) {
     state.hasError = error.message
@@ -14,12 +14,12 @@ export const mutations = {
 
 export const actions = {
   SEND_EMAIL({ commit }, data) {
-    console.log(this.$config)
     this.$axios
-      .post(this.$config.SUBMIT_ENDPOINT, data)
-      .then((d) => {
-        commit('submitted')
+      .$post(this.$config.SUBMIT_ENDPOINT, data)
+      .then(() => commit('submit'))
+      .catch((e) => {
+        console.error(e)
+        commit('hasError', e)
       })
-      .catch((e) => console.error(e))
   }
 }

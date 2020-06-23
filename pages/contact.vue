@@ -1,5 +1,5 @@
 <template lang="pug">
-  main#content(style="margin-top:71px;")
+  main#content(style="height:80vh;margin-top:71px;")
 
     div(v-if="enquirySubmitted")
       h3 Thanks for getting in touch.
@@ -53,29 +53,28 @@ export default {
       },
       submitted: false,
       messageTypes: {
-        first: 'Just leaving a message',
-        second: "I've got a question",
-        third: "I'd like to hire you for a project",
-        fourth: 'Something else...'
+        generic: 'Just leaving a message',
+        'new question': "I've got a question",
+        'project question': "I'd like to hire you for a project",
+        'something else': 'Something else...'
       },
       formData: {
         contact: '',
         email: '',
-        details: {
-          phone: '',
-          message: '',
-          enquiryType: ''
-        }
+        phone: '',
+        message: '',
+        enquiryType: ''
       }
     }
   },
   computed: {
     enquirySubmitted() {
-      return this.$store.state.emails.mailsubmitted
+      return this.$store.state.emails.mailSubmitted
     }
   },
   methods: {
     submitHandler(data) {
+      console.log(data)
       this.$store.dispatch('emails/SEND_EMAIL', data)
     }
   },
