@@ -49,7 +49,7 @@ module.exports = {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseUrl: '/'
+    browserBaseURL: '/'
     // proxy: true
   },
   // proxy: {

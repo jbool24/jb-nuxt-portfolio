@@ -58,7 +58,7 @@ exports.handler = (event, context, callback) => {
       to: process.env.CONTACT_EMAIL,
       from: `"${body.email}" <no-reply@justinbellero.com>`,
       subject: `${body.contact} sent you a message from justinbellero.com`,
-      templateId: process.env.SENDGRID_FORM_TEMPLATE_ID,
+      templateId: process.env.EMAIL_TEMPLATE_ID,
       dynamicTemplateData: {
         phone: body.phone,
         email: body.email,
@@ -66,12 +66,11 @@ exports.handler = (event, context, callback) => {
         message: body.message
       }
     }
-    console.log(process.env.SENDGRID_FORM_TEMPLATE_ID)
     sgMail.send(descriptor, (e) => {
       if (e) {
         callback(null, {
           statusCode: 500,
-          body: e.message
+          body: `[Sendgrid Reqeust Failure]: ${e.message}`
         })
       } else {
         callback(null, {
