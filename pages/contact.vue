@@ -88,5 +88,97 @@ export default {
 main#content {
   margin: auto;
   max-width: 90%;
+
+  // Formulate inputs
+  // -----------------------------------------------------------------------------
+
+  .formulate-input {
+    // global wrapper styles
+    width: 100%;
+
+    .formulate-input-label {
+      // global label styles
+    }
+
+    .formulate-input-element {
+      // Global field-level wrapper styles
+      width: 100%;
+    }
+
+    .formulate-input-help {
+      // Global help text styles
+    }
+
+    .formulate-input-errors {
+      // Global error message list wrapper
+    }
+
+    .formulate-input-error,
+    .formulate-file-upload-error {
+      // Error message styles
+      color: #e23000;
+    }
+
+    .formulate-input-group-item {
+      // Group of items (like list of checkboxes) wrapper
+    }
+
+    // Text inputs
+    // -----------------------------------------------------------------------------
+
+    &[data-classification='text'] {
+      input {
+        // Style all text-like input elements
+        width: 100%;
+      }
+    }
+
+    // Textarea inputs
+    // -----------------------------------------------------------------------------
+
+    &[data-classification='textarea'] {
+      textarea {
+        // Style textareas
+        width: 100%;
+      }
+    }
+
+    // Button inputs
+    // -----------------------------------------------------------------------------
+
+    &[data-classification='button'] {
+      button {
+        // Style button inputs
+        width: 100%;
+        height: 100%;
+        padding-top: 2%;
+      }
+      button:focus {
+        outline: none;
+      }
+    }
+
+    // Select lists
+    // -----------------------------------------------------------------------------
+
+    &[data-classification='select'] {
+      select {
+        // Style select lists
+        width: 100%;
+        background-color: #fff;
+      }
+    }
+  }
+
+  // Form-level errors
+  // -----------------------------------------------------------------------------
+
+  .formulate-form-errors {
+    color: red;
+
+    .formulate-form-error {
+      // form errors (not specific to a field)
+    }
+  }
 }
 </style>
