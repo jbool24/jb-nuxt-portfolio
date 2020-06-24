@@ -16,7 +16,10 @@ module.exports = {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', href: '/images/jbavatar_192x.png' }
+    ]
   },
   css: [
     '@/assets/sass/site.scss',
@@ -34,7 +37,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    // Doc: https://github.com/nuxt-community/analytics-module
+    '@nuxtjs/google-analytics'
   ],
   /*
    ** Nuxt.js modules
@@ -44,6 +49,13 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
   ],
+  /*
+   ** Google Analytics module configuration
+   ** See https://axios.nuxtjs.org/options
+   */
+  googleAnalytics: {
+    id: 'UA-105892790-1'
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
