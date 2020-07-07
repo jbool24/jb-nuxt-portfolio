@@ -6,8 +6,9 @@ const { validateEmail, validateLength } = require('./validations')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const headers = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'Content-Type'
+  'Access-Control-Allow-Origin': 'https://www.justinbellero.com',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  Vary: 'Origin'
 }
 
 exports.handler = (event, context, callback) => {
