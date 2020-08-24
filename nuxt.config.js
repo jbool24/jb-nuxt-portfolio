@@ -37,9 +37,7 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss',
-    // Doc: https://github.com/nuxt-community/analytics-module
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/tailwindcss'
   ],
   /*
    ** Nuxt.js modules
@@ -47,15 +45,9 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    ['@nuxtjs/google-gtag', { id: 'UA-105892790-1' }]
   ],
-  /*
-   ** Google Analytics module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  googleAnalytics: {
-    id: 'UA-105892790-1'
-  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
