@@ -29,6 +29,7 @@ module.exports = {
   ],
   plugins: [
     { src: '~/plugins/vue-scroll-reveal.client-only', mode: 'client' },
+    { src: '~/plugins/eaglejs.client-only' },
     { src: '~/plugins/vue-formulate' }
   ],
   /*
@@ -46,7 +47,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
     ['@nuxtjs/google-gtag', { id: 'UA-105892790-1' }]
   ],
   /*
