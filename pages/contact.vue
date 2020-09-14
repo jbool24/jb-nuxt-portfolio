@@ -74,7 +74,6 @@ export default {
   },
   methods: {
     submitHandler(data) {
-      console.log(data)
       this.$store.dispatch('emails/SEND_EMAIL', data)
     }
   },

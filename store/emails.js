@@ -18,7 +18,7 @@ export const actions = {
       .$post(this.$config.SUBMIT_ENDPOINT, data)
       .then(() => commit('submit'))
       .catch((e) => {
-        console.error(e)
+        // console.error(e)
         commit('hasError', e)
       })
   }
