@@ -1,6 +1,6 @@
 export const state = () => ({
   mailSubmitted: false,
-  hasError: ''
+  hasError: '',
 })
 
 export const mutations = {
@@ -9,7 +9,7 @@ export const mutations = {
   },
   hasError(state, error) {
     state.hasError = error.message
-  }
+  },
 }
 
 export const actions = {
@@ -21,5 +21,5 @@ export const actions = {
         // console.error(e)
         commit('hasError', e)
       })
-  }
+  },
 }
