@@ -25,7 +25,7 @@
           a(target="_blank" title="Github" href="http://github.com/jbool24")
             i.fa.fa-github.fa-1x: span.hidden Github
         li
-          a(target="_blank" title="Github" href="http://gitlab.com/jbool24")
+          a(target="_blank" title="Gitlab" href="http://gitlab.com/jbool24")
             i.fa.fa-gitlab.fa-1x: span.hidden Gitlab
         li
           a(target="_blank" title="Linkedin" href="http://www.linkedin.com/in/justinbellero")
