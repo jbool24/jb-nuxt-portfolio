@@ -45,8 +45,8 @@ export default {
     title: 'HCI College',
     description: 'Custom Facebook App integration',
     path: '/portfolio/hcicollege',
-    image: '/images/hci_project.png'
-  }
+    image: '/images/hci_project.png',
+  },
 }
 </script>
 

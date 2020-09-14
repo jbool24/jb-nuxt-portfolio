@@ -49,37 +49,37 @@ export default {
   data() {
     return {
       validationErrors: {
-        name: null
+        name: null,
       },
       submitted: false,
       messageTypes: {
         generic: 'Just leaving a message',
         'new question': "I've got a question",
         'project question': "I'd like to hire you for a project",
-        'something else': 'Something else...'
+        'something else': 'Something else...',
       },
       formData: {
         contact: '',
         email: '',
         phone: '',
         message: '',
-        enquiryType: ''
-      }
+        enquiryType: '',
+      },
     }
   },
   computed: {
     enquirySubmitted() {
       return this.$store.state.emails.mailSubmitted
-    }
+    },
   },
   methods: {
     submitHandler(data) {
       this.$store.dispatch('emails/SEND_EMAIL', data)
-    }
+    },
   },
   head: {
-    title: "Contact | I'm Justin Bellero"
-  }
+    title: "Contact | I'm Justin Bellero",
+  },
 }
 </script>
 

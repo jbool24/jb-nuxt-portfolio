@@ -1,6 +1,6 @@
 const { Nuxt, Builder } = require('nuxt')
 const fastify = require('fastify')({
-  logger: true
+  logger: true,
 })
 
 // Import and Set Nuxt.js options
@@ -13,7 +13,7 @@ async function start() {
 
   const {
     host = process.env.HOST || '127.0.0.1',
-    port = process.env.PORT || 9000
+    port = process.env.PORT || 9000,
   } = nuxt.options.server
 
   await nuxt.ready()
@@ -23,6 +23,7 @@ async function start() {
     await builder.build()
   }
 
+  await fastify.register(require('middie'))
   fastify.use(nuxt.render)
 
   fastify.listen(port, host, (err, address) => {

@@ -4,5 +4,5 @@ import RRSlideshow from './rebelrobinson/Slideshow.vue'
 import WooSlideshow from './watchourown/Slideshow.vue'
 import HCISlideshow from './hciCollege/Slideshow.vue'
 export default {
-  list: [RRSlideshow, WooSlideshow, HCISlideshow]
+  list: [RRSlideshow, WooSlideshow, HCISlideshow],
 }

@@ -55,13 +55,13 @@ export default {
   data() {
     return {
       isNavOpen: this.$store.state.navbar.isOpen,
-      logoImg: null
+      logoImg: null,
     }
   },
   computed: {
     navOpen() {
       return this.$store.state.navbar.isOpen
-    }
+    },
   },
   methods: {
     clickNav() {
@@ -82,13 +82,13 @@ export default {
           window.scrollTo({
             top: ypos,
             left: 0,
-            behavior: 'smooth'
+            behavior: 'smooth',
           })
         }
       }
       if (this.$store.state.navbar.isOpen) this.$store.dispatch('navbar/close')
-    }
-  }
+    },
+  },
 }
 </script>
 

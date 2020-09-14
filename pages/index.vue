@@ -12,8 +12,8 @@ import Technologies from '~/components/sections/Technologies.vue'
 export default {
   components: {
     AboutMe,
-    Technologies
-  }
+    Technologies,
+  },
 }
 </script>
 

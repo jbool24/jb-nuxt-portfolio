@@ -44,8 +44,8 @@ export default {
     title: 'Rebel Robinson Website',
     description: "Sarasota's Premier Boudoir Photographer",
     path: '/portfolio/rebelrobinson',
-    image: '/images/rebelrobinson_project.png'
-  }
+    image: '/images/rebelrobinson_project.png',
+  },
 }
 </script>
 

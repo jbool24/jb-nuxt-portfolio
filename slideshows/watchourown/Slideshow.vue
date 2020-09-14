@@ -48,8 +48,8 @@ export default {
     title: 'Watch Our Own',
     description: 'Health Utility SaaS Startup',
     path: '/portfolio/watchourown',
-    image: '/images//woo_project.png'
-  }
+    image: '/images//woo_project.png',
+  },
 }
 </script>
 

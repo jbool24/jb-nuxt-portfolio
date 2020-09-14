@@ -70,8 +70,8 @@ section#about(class="mt-20 px-4 lg:px-10")
 <script>
 export default {
   computed: {
-    programmingSince: () => new Date(Date.now()).getFullYear() - new Date(2012)
-  }
+    programmingSince: () => new Date(Date.now()).getFullYear() - new Date(2012),
+  },
 }
 </script>
 

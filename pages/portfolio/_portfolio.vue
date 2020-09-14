@@ -11,9 +11,9 @@ export default {
     return {
       slideshow: slideshows.list.find(
         (project) => project.info.path === this.$route.path
-      )
+      ),
     }
-  }
+  },
 }
 </script>
 
