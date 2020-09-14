@@ -66,6 +66,9 @@ module.exports = {
   /*
    ** Build configuration
    */
+  router: {
+    middleware: ['navbar']
+  },
   build: {
     /*
      ** You can extend webpack config here
