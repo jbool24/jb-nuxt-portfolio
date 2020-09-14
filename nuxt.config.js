@@ -1,6 +1,7 @@
 module.exports = {
   mode: 'universal',
   target: 'static',
+  telemetry: process.env.NODE_ENV !== 'production',
   publicRuntimeConfig: {
     SUBMIT_ENDPOINT: '/.netlify/functions/submit-email'
   },
