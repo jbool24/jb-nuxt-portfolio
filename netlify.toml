@@ -1,5 +1,6 @@
 [build]
-  command = "yarn export"
+  command = "yarn generate"
+  publish = "public/"
   functions = "functions/"
 
 [[plugins]]
