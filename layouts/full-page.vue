@@ -1,5 +1,5 @@
 <template lang="pug">
- #wrapper
+#wrapper
     <TheNavbar/>
     <nuxt/>
 </template>
