@@ -16,6 +16,10 @@
               i.fa.fa-github.fa-1x
                 span Github
           li
+            a(target="_blank" title="Gitlab" href="http://gitlab.com/jbool24")
+              i.fa.fa-gitlab.fa-1x
+                span.hidden Gitlab
+          li
             a(target="_blank" title="Linkedin" href="http://www.linkedin.com/in/justinbellero")
               i.fa.fa-linkedin.fa-1x
                 span Linkedin

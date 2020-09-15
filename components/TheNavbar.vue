@@ -9,10 +9,11 @@
 
     nav#nav-main(class="hidden md:block")
       ul.flex
-         li: nuxt-link(to='/') home
+         li: nuxt-link(v-if="$route.path !== '/'" to='/') home
          li: a(href='javascript:void(0);' data-id="about" @click="goToElem") about
          li: a(href='javascript:void(0);' data-id="technology" @click="goToElem") technology
-         li: nuxt-link(to='/contact') contact
+         li: nuxt-link(v-if="$route.path !== '/portfolio'" to='/portfolio') portfolio
+         li: nuxt-link(v-if="$route.path !== '/contact'" to='/contact') contact
          //- li(v-if="user.isAuthenticated"): a(href='/app/logout') Sign Out
          //- li(v-else): a(href='/app') Sign In
 
@@ -25,7 +26,7 @@
           a(target="_blank" title="Github" href="http://github.com/jbool24")
             i.fa.fa-github.fa-1x: span.hidden Github
         li
-          a(target="_blank" title="Github" href="http://gitlab.com/jbool24")
+          a(target="_blank" title="Gitlab" href="http://gitlab.com/jbool24")
             i.fa.fa-gitlab.fa-1x: span.hidden Gitlab
         li
           a(target="_blank" title="Linkedin" href="http://www.linkedin.com/in/justinbellero")
@@ -35,14 +36,16 @@
             i.fa.fa-twitter.fa-1x: span.hidden Twitter
 
     #nav-trigger(class="block md:hidden ml-4")
-      span(class="block", @click="isNavOpen = !isNavOpen")
+      button(:class="{hidden: !navOpen }" class="fixed inset-0 h-full w-full bg-black z-0", @click="clickNav" style="opacity:50%;")
+      span(class="block", style="", @click="clickNav")
 
     nav#nav-mobile(class="block md:hidden")
       ul(:class="{nav__open: navOpen}")
-        li.mx-10: nuxt-link(to='/') home
+        li.mx-10: nuxt-link(v-if="$route.path !== '/'" to='/') home
         li.mx-10: a(href='javascript:void(0);' data-id="about" @click="goToElem") about
         li.mx-10: a(href='javascript:void(0);' data-id="technology" @click="goToElem") technology
-        li.mx-10: nuxt-link(to='/contact') contact
+        li.mx-10: nuxt-link(v-if="$route.path !== '/portfolio'" to='/portfolio') portfolio
+        li.mx-10: nuxt-link(v-if="$route.path !== '/contact'" to='/contact') contact
         //- li(v-if="user.isAuthenticated"): a(href='/app/logout') Sign Out
         //- li(v-else): a(href='/app') Sign In
 </template>
@@ -51,16 +54,23 @@
 export default {
   data() {
     return {
-      isNavOpen: false,
-      logoImg: null
+      isNavOpen: this.$store.state.navbar.isOpen,
+      logoImg: null,
     }
   },
   computed: {
     navOpen() {
-      return this.isNavOpen
-    }
+      return this.$store.state.navbar.isOpen
+    },
   },
   methods: {
+    clickNav() {
+      if (this.$store.state.navbar.isOpen) {
+        this.$store.dispatch('navbar/close')
+      } else {
+        this.$store.dispatch('navbar/open')
+      }
+    },
     goToElem(e) {
       e.preventDefault()
       if (process.client) {
@@ -72,12 +82,13 @@ export default {
           window.scrollTo({
             top: ypos,
             left: 0,
-            behavior: 'smooth'
+            behavior: 'smooth',
           })
         }
       }
-    }
-  }
+      if (this.$store.state.navbar.isOpen) this.$store.dispatch('navbar/close')
+    },
+  },
 }
 </script>
 

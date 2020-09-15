@@ -38,21 +38,21 @@ export default {
   components: {
     IndexHero,
     TheNavbar,
-    TheFooter
+    TheFooter,
   },
   data() {
     return {
       loading: false,
-      showScroller: false
+      showScroller: false,
     }
   },
   computed: {
     user() {
       return {
-        isAuthenticated: false
+        isAuthenticated: false,
       }
     },
-    showPreloader: () => 'false'
+    showPreloader: () => 'false',
   },
   mounted() {
     if (
@@ -77,8 +77,8 @@ export default {
       e.preventDefault()
       if (process.client)
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-    }
-  }
+    },
+  },
 }
 </script>
 

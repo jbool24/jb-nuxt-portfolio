@@ -1,6 +1,6 @@
 export const state = () => ({
   mailSubmitted: false,
-  hasError: ''
+  hasError: '',
 })
 
 export const mutations = {
@@ -9,7 +9,7 @@ export const mutations = {
   },
   hasError(state, error) {
     state.hasError = error.message
-  }
+  },
 }
 
 export const actions = {
@@ -18,8 +18,8 @@ export const actions = {
       .$post(this.$config.SUBMIT_ENDPOINT, data)
       .then(() => commit('submit'))
       .catch((e) => {
-        console.error(e)
+        // console.error(e)
         commit('hasError', e)
       })
-  }
+  },
 }

@@ -1,5 +1,7 @@
+export const namespaced = true
+
 export const state = () => ({
-  isOpen: false
+  isOpen: false,
 })
 
 export const mutations = {
@@ -8,5 +10,14 @@ export const mutations = {
   },
   close(state) {
     state.isOpen = false
-  }
+  },
+}
+
+export const actions = {
+  close({ commit }) {
+    commit('close')
+  },
+  open({ commit }) {
+    commit('open')
+  },
 }

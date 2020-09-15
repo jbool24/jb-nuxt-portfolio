@@ -1,8 +1,9 @@
 module.exports = {
   mode: 'universal',
   target: 'static',
+  telemetry: process.env.NODE_ENV !== 'production',
   publicRuntimeConfig: {
-    SUBMIT_ENDPOINT: '/.netlify/functions/submit-email'
+    SUBMIT_ENDPOINT: '/.netlify/functions/submit-email',
   },
   privateRuntimeConfig: {},
   head: {
@@ -13,22 +14,23 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: process.env.npm_package_description || '',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', href: '/images/jbavatar_192x.png' }
-    ]
+      { rel: 'apple-touch-icon', href: '/images/jbavatar_192x.png' },
+    ],
   },
   css: [
     '@/assets/sass/site.scss',
     '@static/styles/font-awesome.min.css',
-    '@static/styles/animate.css'
+    '@static/styles/animate.css',
   ],
   plugins: [
     { src: '~/plugins/vue-scroll-reveal.client-only', mode: 'client' },
-    { src: '~/plugins/vue-formulate' }
+    { src: '~/plugins/eaglejs.client-only' },
+    { src: '~/plugins/vue-formulate' },
   ],
   /*
    ** Nuxt.js dev-modules
@@ -37,7 +39,7 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
   ],
   /*
    ** Nuxt.js modules
@@ -45,15 +47,15 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    ['@nuxtjs/google-gtag', { id: 'UA-105892790-1' }]
+    // '@nuxtjs/pwa',
+    ['@nuxtjs/google-gtag', { id: 'UA-105892790-1' }],
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    browserBaseURL: '/'
+    browserBaseURL: '/',
     // proxy: true
   },
   // proxy: {
@@ -65,10 +67,16 @@ module.exports = {
   /*
    ** Build configuration
    */
+  router: {
+    middleware: ['navbar'],
+  },
   build: {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
-  }
+    extend(config, ctx) {},
+  },
+  generate: {
+    dir: 'public',
+  },
 }
