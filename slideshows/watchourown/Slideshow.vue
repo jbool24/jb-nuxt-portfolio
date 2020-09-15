@@ -9,8 +9,8 @@
     slide(steps="3" enterNext='bounceInRight' leaveNext="bounceOutLeft" enterPrev="bounceInLeft" leavePrev='bounceOutRight')
       h3 Project Goals
       p(v-if="step >= 1" class="pt-10")
-        | Faced with nothing more than a big idea and a few wire-frame sketches
-        | the tasked me to help organizing project requirements and developing
+        | Faced with nothing more than a big idea and a few wire-frame sketches,
+        | this client tasked me to help organizing project requirements and developing
         | a plan to translate ideas into a full featured platform.
       p(v-if="step >= 2" class="pt-2")
         | The client had previously hired many contractors but hit a wall many times

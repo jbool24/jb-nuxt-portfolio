@@ -2,23 +2,24 @@
 #slideshow.eg-theme-gourmet
   .eg-slideshow
     slide(enterPrev='bounceInLeft' leave="bounceOutLeft")
-      h1 Rebel Robinson
-      div(class="w-full items-center ")
-        img(class="mx-auto" src="/images/rebelrobinson_project.png")
+        h1 Rebel Robinson
+        div(class="w-full items-center ")
+            img(class="mx-auto" src="/images/rebelrobinson_project.png")
 
     slide(:steps="3" enterNext='bounceInRight' leaveNext="bounceOutLeft" enterPrev="bounceInLeft" leavePrev='bounceOutRight')
-      h3 Project Goal
-      p(v-if="step >= 2", class="py-6").
-          The main challenge of this project was to deliver a site that could
-          continually be updated/maintained with very little overhead. This woould allow
-          the owner to make changes in the future to highlight new work, offer
-          sales or promotions, and engage with her audience.
-      p(v-if="step >= 3", class="py-6").
-          Because of the ongoing costs related to maintenance, hosting, and the
-          constant patching of security risks, a traditional server-side CMS
-          such as Wordpress was not a good option. In this case, a completely
-          custom solution would also have been overkill and not well
-          suited for this project.
+        h3 Project Goal
+        p(v-if="step >= 2" class="pt-10").
+            The main challenge of this project was to deliver a site that could
+            continually be updated/maintained with very little overhead. This would allow
+            the owner to make changes in the future to highlight new work, offer
+            sales or promotions, and engage with her audience.
+
+        p(v-if="step >= 3" class="pt-10").
+            Because of the ongoing costs related to maintenance, hosting, and the
+            constant patching of security risks, a traditional server-side CMS
+            such as Wordpress was not a good option. In this case, a completely
+            custom solution would also have been overkill and not well
+            suited for this project.
 
     slide(:steps="2" enter='bounceInRight' leavePrev='bounceOutRight')
         h3 Solution
@@ -30,12 +31,12 @@
             editor.
 
         p(v-if="step >= 2" class="pt-4").
-            I was still able to deliver a modern and SEO ready
+            I was able to deliver a modern and SEO ready
             website that uses dynamic data. The owner can manage and upload
             projects and photographs easily, engage with her clients and site
             visitors in real-time chats when she chooses, and use the tool to help
             facilitate bookings and manage promotions for her business.
-        p(v-if="step >= 2" class="text-right") wanna see? -->
+        p(v-if="step >= 2" class="text-right animate__animated animate__heartBeat animate__delay-2s") wanna see? -->
             a(href="https://www.rebelrobinson.com") &nbsp;link
 </template>
 
