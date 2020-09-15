@@ -2,38 +2,24 @@
 #slideshow.eg-theme-gourmet
   .eg-slideshow
     slide(enterPrev='bounceInLeft' leave="bounceOutLeft")
-      h1 HCI College
-      img(src="/images/hci_project.png")
+        h1 HCI College
+        div(class="w-full items-center ")
+            img(class="mx-auto" src="/images/hci_project.png")
 
-    slide(enterNext='bounceInRight' leaveNext="bounceOutLeft" enterPrev="bounceInLeft" leavePrev='bounceOutRight')
+    slide(steps="2" enterNext='bounceInRight' leaveNext="bounceOutLeft" enterPrev="bounceInLeft" leavePrev='bounceOutRight')
         h3 Project Description
-        p
-          | Created a lead generation automation and CRM integration for large
-          | continuing education institution in Florida. The client had been
+        p(class="pt-10")
+          | For this project, I created a lead generation automation and CRM integration for a large
+          | continuing education institute in Florida. The client had been
           | struggling with social platforms and isolated data for some time.
-          | In order to improve the capture of data from one of their social brand
-          | presences into an existing business workflow a custom solution,
-          | using PHP7 in this case, to directly import real-time data and
+        p(v-if="step >= 2" class="pt-4")
+          | In order to improve the workflow for capturing data from their social brand
+          | presences into an existing business systems I deployed a custom solution,
+          | using PHP7 to comply with their existing environment, to directly import real-time data and
           | information about prospective students.
 
-
-    slide(enter='bounceInRight' leavePrev='bounceOutRight')
-      h3 Solution
-      p
-        |  Deliverables for a beta MVP product included an Angular5 application,
-        |  an iOS and an Android mobile application, and a cloud backed API
-        |  structured as microservices so the product could evolve and mature
-        |  with new features easily. This allowed for future SaaS offerings to
-        |  develop and test the market with lower risk by decoupling features
-        |  from each other.
-        |
-        |  Structured in this manner, the project costs remained lower by
-        |  enabling the development team to stay small and extremely agile when
-        |  the need for changes arose. The product launched in the second
-        |  quarter of 2019 which is currently in beta.
-
-      p(class="text-right") go to their site? -->
-          a(href="https://www.hci.edu/") link
+        p(v-if="step >= 2" class="pt-6 text-right") go to their site? -->
+            a(href="https://www.hci.edu/") &nbsp;link
 </template>
 
 <script>
@@ -50,7 +36,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import 'eagle.js/dist/themes/gourmet/gourmet.css';
 #slideshow {
@@ -61,6 +47,10 @@ export default {
   .eg-slideshow {
     font-family: 'Raleway';
     background-color: #eef;
+
+    h1 {
+      font-size: 3em;
+    }
 
     .eg-slide {
       .eg-slide-content {
