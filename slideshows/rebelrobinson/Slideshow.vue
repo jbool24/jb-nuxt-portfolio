@@ -3,36 +3,40 @@
   .eg-slideshow
     slide(enterPrev='bounceInLeft' leave="bounceOutLeft")
       h1 Rebel Robinson
-      img(src="/images/rebelrobinson_project.png")
+      div(class="w-full items-center ")
+        img(class="mx-auto" src="/images/rebelrobinson_project.png")
 
-    slide(enterNext='bounceInRight' leaveNext="bounceOutLeft" enterPrev="bounceInLeft" leavePrev='bounceOutRight')
+    slide(:steps="3" enterNext='bounceInRight' leaveNext="bounceOutLeft" enterPrev="bounceInLeft" leavePrev='bounceOutRight')
       h3 Project Goal
-      p.
+      p(v-if="step >= 2", class="py-6").
           The main challenge of this project was to deliver a site that could
-          continually be updated/maintained with very little overhead allowing
+          continually be updated/maintained with very little overhead. This woould allow
           the owner to make changes in the future to highlight new work, offer
-          sales and promotions, and engage with her audience. Because of the
-          ongoing costs related to maintenance, hosting, and the constant patching
-          of security risks, a traditional server-side CMS such as Wordpress was
-          not a good option. In this case, a completely custom solution would also
-          have been overkill and not well suited for this project.
+          sales or promotions, and engage with her audience.
+      p(v-if="step >= 3", class="py-6").
+          Because of the ongoing costs related to maintenance, hosting, and the
+          constant patching of security risks, a traditional server-side CMS
+          such as Wordpress was not a good option. In this case, a completely
+          custom solution would also have been overkill and not well
+          suited for this project.
 
-    slide(enter='bounceInRight' leavePrev='bounceOutRight')
+    slide(:steps="2" enter='bounceInRight' leavePrev='bounceOutRight')
         h3 Solution
         p.
             After discussing a few subscription based CMS tools, a strategic
-            decision was made to implement the site under the Wix platform for
+            decision was made to implement the site on the Wix platform for
             the exceptional price model and its ease of use by the site owner
             to maintain and modify it to her needs in the future with a wysiwyg
-            editor. While the freedom for development and styling is diminished
-            by not having direct control over HTML markup or CSS stylesheets on
-            the platform, I was still able to deliver a modern and SEO ready
+            editor.
+
+        p(v-if="step >= 2" class="pt-4").
+            I was still able to deliver a modern and SEO ready
             website that uses dynamic data. The owner can manage and upload
             projects and photographs easily, engage with her clients and site
-            visitors in real-time when she chooses, and use the tool to help
+            visitors in real-time chats when she chooses, and use the tool to help
             facilitate bookings and manage promotions for her business.
-        p(class="text-right") wanna see? --> 
-            a(href="https://www.rebelrobinson.com") link
+        p(v-if="step >= 2" class="text-right") wanna see? -->
+            a(href="https://www.rebelrobinson.com") &nbsp;link
 </template>
 
 <script>
@@ -49,7 +53,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import 'eagle.js/dist/themes/gourmet/gourmet.css';
 #slideshow {
@@ -60,6 +64,10 @@ export default {
   .eg-slideshow {
     font-family: 'Raleway';
     background-color: #eef;
+
+    h1 {
+      font-size: 3em;
+    }
 
     .eg-slide {
       .eg-slide-content {
