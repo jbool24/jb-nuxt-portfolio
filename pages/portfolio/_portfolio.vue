@@ -1,6 +1,6 @@
 <template lang="pug">
     div
-        component(:is="slideshow", :mouseNavigation="false")
+        component(:is="slideshow", :onEndExit="goTo")
 </template>
 
 <script>
@@ -14,7 +14,14 @@ export default {
       ),
     }
   },
+  methods: {
+    goTo() {
+      this.$router.push('/portfolio')
+    },
+  },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+@import 'eagle.js/dist/themes/gourmet/gourmet.css';
+</style>

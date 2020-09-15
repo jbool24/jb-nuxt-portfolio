@@ -5,14 +5,14 @@
             //-   span.logo
             //-   span Eagle
             //-   span.grey .js
-            h1 Projects
+            h1(class="pl-16 font-bold") Projects
 
             p(class="w-full md:w-1/2")
-              | Some web development projects I've worked on.
+              //- | Some web development projects I've worked on.
 
 
         .thumbnails
-          .box-card(v-for='slideshow in slideshows' class="w-full md:w-1/3 p-8")
+          .box-card(v-for='slideshow in slideshows' class="w-full md:w-1/2 p-8")
             nuxt-link(:to='slideshow.info.path' @click.native="click")
               .embedded-slideshow-container
                 img(:src="slideshow.info.image")
@@ -45,7 +45,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .frontpage {
   @apply flex flex-col h-full mt-20 mx-10 mb-40;
