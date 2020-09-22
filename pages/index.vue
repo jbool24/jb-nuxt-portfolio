@@ -2,17 +2,20 @@
   main#content
     AboutMe
     Technologies
+    Brands
 
 </template>
 
 <script>
 import AboutMe from '~/components/sections/AboutMe.vue'
 import Technologies from '~/components/sections/Technologies.vue'
+import Brands from '~/components/sections/Brands.vue'
 
 export default {
   components: {
     AboutMe,
     Technologies,
+    Brands,
   },
 }
 </script>
