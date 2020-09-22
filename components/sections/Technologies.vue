@@ -72,10 +72,10 @@ section#technology(class="mt-20 px-4 lg:px-10 lg:mt-32")
      h4 Database
      p.
       Right now FaunaDB, Cloud Firestore, Monogo DB, Redis DB, and MySQL are my
-      goto persistance technologies in many of my projects.
-      I'm a big fan of Document based databases becuase of thier flexability
-      especially for working on early-stage projects where domains need
-      to reamain nimble through development.
+      goto persistance technologies.
+      I'm a big fan of Document based databases because of thier flexability
+      especially for early-stage projects where domains and features need
+      to remain nimble to iterate through fast development cycles.
    //- End of Icon Block
 
 </template>
