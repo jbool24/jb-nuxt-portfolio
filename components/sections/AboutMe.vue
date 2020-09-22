@@ -34,7 +34,7 @@ section#about(class="mt-20 px-4 lg:px-10")
           | of time tweaking web pages, customizing my favorite programs, and even
           | scripting my operating system to perform all the magic I wanted.
           | That process of curiosity and self discovery, constantly hacking and
-          | breaking things to understand how they worked, taught me a great deal
+          | breaking things to understand how they worked, has taught me a great deal
           | more that I would've imagined.
         br
 
@@ -44,13 +44,13 @@ section#about(class="mt-20 px-4 lg:px-10")
           | language scope because I really believe that being a polyglot, helps
           | programmers analyze problems in more detailed and complete ways.
           | I've dabbled in Java, messed around with Rust, scanned through C++,
-          | but today I work mostly in Javascript/Node.js and Python 3.
+          | but today I work mostly in Javascript/Node.js, Dart, and Python 3.
         br
 
         p
           | Right now I'm living in sunny West Florida and spend a good amount
           | of time persuing a good work/life balance. In my free time I enjoy meditation
-          | practicing yoga at least once a week, and spending quality time with friends.
+          | practicing yoga, and spending quality time with friends.
           | Mind/body balance is very important to me and a key part of my personal productivity.
 
       //- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
