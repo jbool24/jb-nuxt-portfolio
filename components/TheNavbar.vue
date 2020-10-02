@@ -9,11 +9,11 @@
 
     nav#nav-main(class="hidden md:block")
       ul.flex
-         li: nuxt-link(v-if="$route.path !== '/'" to='/') home
+         li(v-if="$route.path !== '/'" ): nuxt-link(to='/') home
          li: a(href='javascript:void(0);' data-id="about" @click="goToElem") about
          li: a(href='javascript:void(0);' data-id="technology" @click="goToElem") technology
-         li: nuxt-link(v-if="$route.path !== '/portfolio'" to='/portfolio') portfolio
-         li: nuxt-link(v-if="$route.path !== '/contact'" to='/contact') contact
+         li(v-if="$route.path !== '/portfolio'"): nuxt-link(to='/portfolio') portfolio
+         li(v-if="$route.path !== '/contact'"): nuxt-link(to='/contact') contact
          //- li(v-if="user.isAuthenticated"): a(href='/app/logout') Sign Out
          //- li(v-else): a(href='/app') Sign In
 
@@ -41,11 +41,11 @@
 
     nav#nav-mobile(class="block md:hidden")
       ul(:class="{nav__open: navOpen}")
-        li.mx-10: nuxt-link(v-if="$route.path !== '/'" to='/') home
+        li.mx-10(v-if="$route.path !== '/'"): nuxt-link(to='/') home
         li.mx-10: a(href='javascript:void(0);' data-id="about" @click="goToElem") about
         li.mx-10: a(href='javascript:void(0);' data-id="technology" @click="goToElem") technology
-        li.mx-10: nuxt-link(v-if="$route.path !== '/portfolio'" to='/portfolio') portfolio
-        li.mx-10: nuxt-link(v-if="$route.path !== '/contact'" to='/contact') contact
+        li.mx-10(v-if="$route.path !== '/portfolio'"): nuxt-link(to='/portfolio') portfolio
+        li.mx-10(v-if="$route.path !== '/contact'"): nuxt-link(to='/contact') contact
         //- li(v-if="user.isAuthenticated"): a(href='/app/logout') Sign Out
         //- li(v-else): a(href='/app') Sign In
 </template>
@@ -195,7 +195,7 @@ export default {
         visibility: visible;
         max-height: fit-content;
         box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
-        max-height: 200px;
+        max-height: 204px;
       }
     }
   }
