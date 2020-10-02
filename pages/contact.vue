@@ -1,5 +1,5 @@
 <template lang="pug">
-  main#content(style="height:80vh;margin-top:71px;")
+  main#content(style="margin-top:71px;")
 
     div(v-if="enquirySubmitted")
       h3 Thanks for getting in touch.
