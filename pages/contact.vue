@@ -87,6 +87,9 @@ export default {
 main#content::v-deep {
   margin: auto;
   max-width: 90%;
+  @screen md {
+    height: 80vh;
+  }
 
   // Formulate inputs
   // -----------------------------------------------------------------------------
@@ -150,7 +153,7 @@ main#content::v-deep {
         // Style button inputs
         width: 100%;
         height: 100%;
-        padding-top: 2%;
+        //padding-top: 2%;
       }
       button:focus {
         outline: none;
