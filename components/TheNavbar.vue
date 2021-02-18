@@ -13,7 +13,7 @@
          li: a(href='javascript:void(0);' data-id="about" @click="goToElem") about
          li: a(href='javascript:void(0);' data-id="technology" @click="goToElem") technology
          li(v-if="$route.path !== '/portfolio'"): nuxt-link(to='/portfolio') portfolio
-         li(v-if="$route.path !== '/portfolio'"): nuxt-link(to='/resume') resume
+         li(v-if="$route.path !== '/resume'"): nuxt-link(to='/resume') resume
          li(v-if="$route.path !== '/contact'"): nuxt-link(to='/contact') contact
          //- li(v-if="user.isAuthenticated"): a(href='/app/logout') Sign Out
          //- li(v-else): a(href='/app') Sign In
@@ -46,6 +46,7 @@
         li.mx-10: a(href='javascript:void(0);' data-id="about" @click="goToElem") about
         li.mx-10: a(href='javascript:void(0);' data-id="technology" @click="goToElem") technology
         li.mx-10(v-if="$route.path !== '/portfolio'"): nuxt-link(to='/portfolio') portfolio
+        li.mx-10(v-if="$route.path !== '/resume'"): nuxt-link(to='/resume') resume
         li.mx-10(v-if="$route.path !== '/contact'"): nuxt-link(to='/contact') contact
         //- li(v-if="user.isAuthenticated"): a(href='/app/logout') Sign Out
         //- li(v-else): a(href='/app') Sign In
