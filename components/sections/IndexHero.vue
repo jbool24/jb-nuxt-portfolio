@@ -13,10 +13,10 @@
 
           details.pr-4
             | I graduated from NYU with a degree in music and used to be a performer,
-            | worked in chemical manufacturing for half a decade, spend a little time in the continuing education space,
+            | worked in chemical manufacturing for half a decade, spent a little time in the continuing education space,
             | and each opportunity has taught me many things.
             | I spend a lot of time reading technical documentation
-            | and researching open-source software that I like to follow, especially home-automation.
+            | and researching open-source projects that I like to follow.
             | I am always looking for cool things to work on so if you want to
             | talk tech, need some help or information about a project, or you
             | have a great idea I can make a reality for you, <span class="font-bold">reach out!</span>
