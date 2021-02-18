@@ -1,5 +1,4 @@
 module.exports = {
-  mode: 'universal',
   target: 'static',
   telemetry: process.env.NODE_ENV !== 'production',
   publicRuntimeConfig: {
