@@ -23,33 +23,33 @@ section#about(class="mt-20 px-4 lg:px-10")
         p.section-subtitle
           | "I rather spend an eternity improving the things I have the power
           | to change than one second on the things that I cannot."
-        p(class="mr-10 pt-4 text-right") — Myself
+        p(class="mr-10 pt-4 text-right") — Me 🤓
 
       div(class="mt-10")
         p
           | I started programming almost {{programmingSince}} years ago out of a
           | desire to make my life easier by convincing a computer to do the "dirty"
-          | work. I'm almost entirely self taught and it has taken me long time to collect
+          | work. I'm almost entirely self taught and it has taken me {{programmingSince}} years to collect
           | and cultivate the skills I have today. I took a few classes in college and spent a lot
           | of time tweaking web pages, customizing my favorite programs, and even
           | scripting my operating system to perform all the magic I wanted.
           | That process of curiosity and self discovery, constantly hacking and
           | breaking things to understand how they worked, has taught me a great deal
-          | more that I would've imagined.
+          | more than I would've imagined.
         br
 
         p
           | My introduction to programming began with Object-Oriented styles using
           | Python and Java. I'm always looking to expand my
           | language scope because I really believe that being a polyglot, helps
-          | programmers analyze problems in more detailed and complete ways.
+          | programmers stay sharp to analyze problems in more detailed and complete ways.
           | I've dabbled in Java, messed around with Rust, scanned through C++,
           | but today I work mostly in Javascript/Node.js, Dart, and Python 3.
         br
 
         p
           | Right now I'm living in sunny West Florida and spend a good amount
-          | of time persuing a good work/life balance. In my free time I enjoy meditation
+          | of time persuing good work/life balance. In my free time I enjoy meditation,
           | practicing yoga, and spending quality time with friends.
           | Mind/body balance is very important to me and a key part of my personal productivity.
 

@@ -12,20 +12,21 @@
           | Ok, so only the former few are true but perhaps <i>someday</i> they'll all be true.
 
           details.pr-4
-            | I graduated from NYU with a degree in music and used to be a performer,
-            | worked in chemical manufacturing for half a decade, spent a little time in the continuing education space,
-            | and each opportunity has taught me many things.
-            | I spend a lot of time reading technical documentation
-            | and researching open-source projects that I like to follow.
-            | I am always looking for cool things to work on so if you want to
-            | talk tech, need some help or information about a project, or you
+            | I graduated from NYU with a degree in music and I used to be an entertainer.
+            | I've worked in chemical manufacturing for half a decade, spent a little time in the continuing education space,
+            | and ultimately I found my passion in programming. Each opportunity has taught me many valuable things both personal and professionally.
+            | I'm grateful for every new experience because it's an opportunity to learn.
+            | I spend a lot of time reading technical documentation (🤓 nerd. I know.)
+            | and researching awesome open-source projects.
+            | I am always looking for cool things to work on so if you want to pick my brain and
+            | talk tech, you need some help or information about a project, or you
             | have a great idea I can make a reality for you, <span class="font-bold">reach out!</span>
             | I’m here and would love to connect.
             summary.text-right.pt-4 ...
 
       //- Call to Action
       div(class="px-10 md:px-20 lg:px-10")
-        nuxt-link(to="/contact" class="float-right w-full bg-white lg:bg-transparent lg:w-auto text-center button") Talk To Me!
+        nuxt-link(to="/contact" class="float-right w-full bg-white lg:bg-transparent lg:w-auto text-center button animate__animated animate__heartBeat animate__delay-3s") Talk To Me!
       //- End Call to Action
 </template>
 

@@ -26,7 +26,7 @@ section#technology(class="mt-20 px-4 lg:px-10 lg:mt-32")
       | The holy trinity of the web. These fundamental web tools only get more
       | and more powerful as time goes on and I make it a
       | priority to stay up-to-date with the newest stable specs.
-      | Toss in a little TypeScript and we got a recipe for enterprise excellence!
+      | Toss in a little TypeScript and we've got a recipe for enterprise excellence!
    //- End of Icon Block
 
    //- Icon Block-->
@@ -40,10 +40,10 @@ section#technology(class="mt-20 px-4 lg:px-10 lg:mt-32")
       span &nbsp;Linux
      p
       | It was love at first boot-up. I also use macOS but ever
-      | since I met Linux 10 years ago I knew I found my favorite toy. I
-      | believe in the open-source movement and promote linux as
-      | an operating system for its freedom and flexability. (I
-      | like mine debian flavored!)
+      | since I met Linux {{yearsSinceYear(2006)}} years ago I knew I found my favorite toy.
+      | I believe in the open-source movement and promote linux as
+      | an operating system for its freedom and flexability.
+      | (I like mine debian flavored!)
    //- End of Icon Block
 
    //- Icon Block
@@ -58,8 +58,8 @@ section#technology(class="mt-20 px-4 lg:px-10 lg:mt-32")
         Some favorite tech? Name dropping here, Are you ready? --
         Vue.js, NuxtJS, Tailwind CSS, Flutter, Sass, Nest.js, Pug.js (formally Jade),
         Flask, Rails, and Laravel. These tools help build apps and websites
-        fast and reliably. Gitlab, Github, Netlify, Heroku and GCP help me build,
-        manage, deploy, and automate projects I work on for
+        fast and reliably. Gitlab, Github, Netlify, Heroku and Google Cloud Platform help me build,
+        manage, deploy, and automate projects for
         Continuous Integration and Delivery.
     //- End of Icon Block
 
@@ -71,17 +71,23 @@ section#technology(class="mt-20 px-4 lg:px-10 lg:mt-32")
     .icon-block-description
      h4 Database
      p.
-      Right now FaunaDB, Cloud Firestore, Monogo DB, Redis DB, and MySQL are my
+      FaunaDB, Cloud Firestore, Mongo DB, and Redis DB are my
       goto persistance technologies.
-      I'm a big fan of Document based databases because of thier flexability
-      especially for early-stage projects where domains and features need
-      to remain nimble to iterate through fast development cycles.
+      I'm a big fan of NoSQL databases because of their flexability,
+      especially for early-stage projects where domains definitions need
+      to remain agile to iterating through changes over fast development cycles.
    //- End of Icon Block
 
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    yearsSinceYear: (yearInt) => {
+      return new Date(Date.now()).getFullYear() - new Date(yearInt)
+    },
+  },
+}
 </script>
 
 <style lang="css" scoped></style>
