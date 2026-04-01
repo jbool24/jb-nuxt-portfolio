@@ -1,0 +1,50 @@
+{
+  "name": "JB Portfolio Site",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
+  "mounts": [
+    "source=/usr/local/share/ca-certificates,target=/usr/local/share/ca-certificates,type=bind,readonly",
+    "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.claude,target=/home/node/.claude,type=bind",
+    "source=${localEnv:HOME}/.claude.json,target=/home/node/.claude.json,type=bind",
+    "source=${localEnv:HOME}/.continue,target=/home/node/.continue,type=bind"
+  ],
+  "postCreateCommand": "sudo update-ca-certificates",
+  "containerEnv": {
+    "NODE_EXTRA_CA_CERTS": "/usr/local/share/ca-certificates/drst-ca.crt"
+  },
+  "runArgs": [
+    "--name",
+    "jb-nuxt-portfolio"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "continue.continue",
+        "eamodio.gitlens",
+        "Vue.volar",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "antfu.iconify",
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "github.copilot.enable": {
+          "*": false
+        },
+        "github.copilot.editor.enableAutoCompletions": false,
+        "github.copilot.editor.enableCodeActions": false,
+        "github.copilot.nextEditSuggestions.enabled": false,
+        "github.copilot.renameSuggestions.triggerAutomatically": false,
+        "chat.commandCenter.enabled": false,
+        "chat.agent.enabled": false,
+        "chat.disableAIFeatures": true
+      }
+    }
+  },
+  "forwardPorts": [
+    3000
+  ],
+  "remoteUser": "node"
+}
