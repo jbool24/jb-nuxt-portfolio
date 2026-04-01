@@ -23,9 +23,9 @@ section(class="w-full h-full px-4 lg:px-10 lg:mt-32")
                 img(class="h-20 mx-auto" src="/images/brand-images/apollo.png")
             div(class="w-full md:w-1/2 px-4 py-10")
                 img(class="h-20 mx-auto" src="/images/brand-images/gql.png")
-
             div(class="w-full md:w-1/3 px-4 py-10")
                 img(class="h-20 mx-auto" src="/images/brand-images/vuejs.png")
+
             div(class="w-full md:w-1/3 px-4 py-10")
                 img(class="h-20 mx-auto" src="/images/brand-images/flutter.png")
             div(class="w-full md:w-1/3 px-4 py-10")
@@ -35,18 +35,14 @@ section(class="w-full h-full px-4 lg:px-10 lg:mt-32")
                 img(class="h-20 mx-auto" src="/images/brand-images/postman.png")
             div(class="w-full md:w-1/2 px-4 py-10")
                 img(class="h-20 mx-auto" src="/images/brand-images/cypress.png")
-
             div(class="w-full md:w-1/3 px-4 py-10")
                 img(class="h-20 mx-auto" src="/images/brand-images/fauna.png")
+
             div(class="w-full md:w-1/3 px-4 py-10")
                 img(class="h-20 mx-auto" src="/images/brand-images/firebase.png")
             div(class="w-full md:w-1/3 px-4 py-10")
                 img(class="h-20 mx-auto" src="/images/brand-images/mongo.png")
 
-            div(class="w-full md:w-1/2 px-4 py-10")
-                img(class="h-20 mx-auto" src="/images/brand-images/hyperleger.png")
-            div(class="w-full md:w-1/2 px-4 py-10")
-                img(class="h-20 mx-auto" src="/images/brand-images/solidity.png")
 </template>
 
 <script>

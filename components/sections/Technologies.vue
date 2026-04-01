@@ -11,7 +11,7 @@ section#technology(class="mt-20 px-4 lg:px-10 lg:mt-32")
          | these are by no means exclusive.
 
     div(class="flex w-full md:pr-8 text-center justify-end")
-        nuxt-link(to="/portfolio" class="button w-full md:w-1/2 px-4" style="font-size:1em;")
+        NuxtLink(to="/portfolio" class="button w-full md:w-1/2 px-4" style="font-size:1em;")
           i.fa.fa-rocket(aria-hidden="true") &nbsp; Projects
 
   div(class="flex flex-wrap w-full lg:w-2/3")
@@ -80,13 +80,9 @@ section#technology(class="mt-20 px-4 lg:px-10 lg:mt-32")
 
 </template>
 
-<script>
-export default {
-  methods: {
-    yearsSinceYear: (yearInt) => {
-      return new Date(Date.now()).getFullYear() - new Date(yearInt)
-    },
-  },
+<script setup lang="ts">
+const yearsSinceYear = (yearInt: number): number => {
+  return new Date(Date.now()).getFullYear() - new Date(yearInt).getFullYear()
 }
 </script>
 

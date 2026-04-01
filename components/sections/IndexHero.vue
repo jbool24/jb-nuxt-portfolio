@@ -26,7 +26,7 @@
 
       //- Call to Action
       div(class="px-10 md:px-20 lg:px-10")
-        nuxt-link(to="/contact" class="float-right w-full bg-white lg:bg-transparent lg:w-auto text-center button animate__animated animate__heartBeat animate__delay-3s") Talk To Me!
+        NuxtLink(to="http://www.linkedin.com/in/justinbellero" class="float-right w-full bg-white lg:bg-transparent lg:w-auto text-center button animate__animated animate__heartBeat animate__delay-3s") Talk To Me!
       //- End Call to Action
 </template>
 
@@ -44,16 +44,19 @@ section#banner-content {
     line-height: 60px;
     font-weight: 800;
     color: #111;
+
     @screen sm {
       font-size: 62px;
     }
   }
+
   h2 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 18px;
     font-weight: 300;
     color: #111;
     background-color: rgba(238, 238, 238, 0.8);
+
     @screen md {
       background-color: transparent;
     }
@@ -84,9 +87,11 @@ section#banner-content {
       &:hover {
         cursor: pointer;
       }
+
       &::before {
         content: ' + more';
       }
+
       &::-webkit-details-marker {
         display: none;
       }
@@ -102,6 +107,7 @@ section#banner-content {
       height: 5px;
       margin-top: 30px;
     }
+
     &::after {
       background: #d2b356;
       content: '';

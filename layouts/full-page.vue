@@ -1,14 +1,11 @@
 <template lang="pug">
 #wrapper
-    <TheNavbar/>
-    <nuxt/>
+    TheNavbar
+    slot
 </template>
 
 <script>
-import TheNavbar from '~/components/TheNavbar.vue'
-export default {
-  components: { TheNavbar },
-}
+export default {}
 </script>
 
 <style lang="css" scoped></style>

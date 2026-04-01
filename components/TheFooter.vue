@@ -8,10 +8,6 @@
         <!--Social Icons in Footer-->
         ul.col-2.social-icons
           li
-            a(target="_blank" title="Facebook" href="https://www.facebook.com/justin.bellero")
-              i.fa.fa-facebook.fa-1x
-                span Facebook
-          li
             a(target="_blank" title="Github" href="http://github.com/jbool24")
               i.fa.fa-github.fa-1x
                 span Github
@@ -23,10 +19,6 @@
             a(target="_blank" title="Linkedin" href="http://www.linkedin.com/in/justinbellero")
               i.fa.fa-linkedin.fa-1x
                 span Linkedin
-          li
-            a(target="_blank" title="Twitter" href="http://www.twitter.com/jbool24")
-              i.fa.fa-twitter.fa-1x
-                span Twitter
         <!--End of Social Icons in Footer-->
 
 </template>
@@ -37,6 +29,7 @@ export default {}
 
 <style lang="scss" scoped>
 #landing-footer {
+
   p,
   a {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
@@ -44,6 +37,7 @@ export default {}
     font-weight: normal;
     color: #999;
   }
+
   /* Footer Icon Color */
   i {
     color: #999;

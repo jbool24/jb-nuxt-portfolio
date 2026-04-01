@@ -2,8 +2,8 @@
 // =========
 
 // TEMPLATE/FRAMEWORK STYLES
-// @import "materialize/materialize";
-@import "namari/namari";
+// @use "materialize/materialize";
+@use "namari/namari";
 
 // Site Variables
 // ===========
@@ -12,5 +12,5 @@
 // Site Styles
 // ===========
 // Add your own site style includes here
-@import "site/style-overrides";
-@import "site/components/form";
+@use "site/style-overrides";
+@use "site/components/form";
