@@ -91,3 +91,6 @@ sw.*
 
 # Local Netlify folder
 .netlify
+
+# Local configs
+.claude/*.local.json
