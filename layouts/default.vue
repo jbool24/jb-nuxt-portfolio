@@ -45,10 +45,10 @@ onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].boundingClientRect.y < 0) {
         document.body.classList.add('pastFold')
-        this.showScroller = true
+        showScroller.value = true
       } else {
         document.body.classList.remove('pastFold')
-        this.showScroller = false
+        showScroller.value = false
       }
     })
     observer.observe(document.querySelector('#foldLine'))
