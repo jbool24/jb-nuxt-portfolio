@@ -1,19 +1,12 @@
 <template lang="pug">
     section.frontpage
         .content(class="h-full")
-            //- h1
-            //-   span.logo
-            //-   span Eagle
-            //-   span.grey .js
             h1(class="pl-16 font-bold") Projects
-
             p(class="w-full md:w-1/2")
-              //- | Some web development projects I've worked on.
-
 
         .thumbnails
-          .box-card(v-for='slideshow in slideshows' class="w-full md:w-1/2 p-8")
-            nuxt-link(:to='slideshow.info.path' @click.native="click")
+          .box-card(v-for='slideshow in allSlideshows' class="w-full md:w-1/2 p-8")
+            NuxtLink(:to='slideshow.info.path' @click="click")
               .embedded-slideshow-container
                 img(:src="slideshow.info.image")
             .caption(class="text-center")
@@ -22,26 +15,15 @@
 
 </template>
 
-<script>
-import slideshows from '@/slideshows'
+<script setup>
+import slideshowsModule from '@/slideshows'
 
-export default {
-  data() {
-    return {
-      slideshows: slideshows.list,
-    }
-  },
-  mounted() {
-    document.currentSlide = {}
-  },
-  methods: {
-    click(evt) {
-      evt.stopPropagation()
-    },
-  },
-  head: {
-    title: "Portfolio | I'm Justin Bellero",
-  },
+useHead({ title: "Portfolio | I'm Justin Bellero" })
+
+const allSlideshows = slideshowsModule.list
+
+function click(evt) {
+  evt.stopPropagation()
 }
 </script>
 
