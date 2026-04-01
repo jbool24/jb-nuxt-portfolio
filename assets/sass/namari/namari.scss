@@ -1,27 +1,27 @@
 @charset "UTF-8";
 
 // Resets and Defaults
-@import 'components/defaults';
+@use 'components/defaults';
 
 // components
-@import 'components/layout';
-@import 'components/header';
-@import 'components/logo';
-@import 'components/buttons';
-// @import 'components/navigation';
-@import 'components/social';
-@import 'components/images';
-@import 'components/fonts';
-@import 'components/banner';
+@use 'components/layout';
+@use 'components/header';
+@use 'components/logo';
+@use 'components/buttons';
+// @use 'components/navigation';
+@use 'components/social';
+@use 'components/images';
+@use 'components/fonts';
+@use 'components/banner';
 
-@import 'components/icons';
-@import 'components/parallax_elements';
-@import 'components/gallery';
-@import 'components/video';
-@import 'components/clients';
-@import 'components/footer';
-@import 'components/scrollup';
-@import 'components/preloader';
+@use 'components/icons';
+@use 'components/parallax_elements';
+@use 'components/gallery';
+@use 'components/video';
+@use 'components/clients';
+@use 'components/footer';
+@use 'components/scrollup';
+@use 'components/preloader';
 
 // Mobile Responsive
-// @import 'components/responsive';
+// @use 'components/responsive';
