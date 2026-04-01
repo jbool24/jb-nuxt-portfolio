@@ -42,7 +42,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import useNavbarStore from '@/stores/navbar'
+import { useNavbarStore } from '@/stores/navbar'
 const navbar = useNavbarStore()
 
 const logoImg = ref(null)
