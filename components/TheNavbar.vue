@@ -42,8 +42,11 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { useNavbarStore } from '@/stores/navbar'
 const navbar = useNavbarStore()
+const route = useRoute()
+const router = useRouter()
 
 const logoImg = ref(null)
 
@@ -62,16 +65,18 @@ const clickNav = () => {
 const goToElem = (e) => {
   e.preventDefault()
   if (import.meta.client) {
-    if (this.$route.name !== 'index') {
-      this.$router.push(`/#${e.target.dataset.id}`)
+    if (route.name !== 'index') {
+      router.push(`/#${e.target.dataset.id}`)
     } else {
       const el = document.getElementById(e.target.dataset.id)
-      const { y: ypos } = el.getBoundingClientRect()
-      window.scrollTo({
-        top: ypos,
-        left: 0,
-        behavior: 'smooth',
-      })
+      if (el) {
+        const { y: ypos } = el.getBoundingClientRect()
+        window.scrollTo({
+          top: window.scrollY + ypos,
+          left: 0,
+          behavior: 'smooth',
+        })
+      }
     }
   }
   if (navbar.isOpen) navbar.close()
