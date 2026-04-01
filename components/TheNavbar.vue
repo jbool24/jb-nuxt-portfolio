@@ -9,20 +9,14 @@
 
     nav#nav-main(class="hidden md:block")
       ul.flex
-         li(v-if="$route.path !== '/'" ): nuxt-link(to='/') home
+         li(v-if="$route.path !== '/'" ): NuxtLink(to='/') home
          li: a(href='javascript:void(0);' data-id="about" @click="goToElem") about
          li: a(href='javascript:void(0);' data-id="technology" @click="goToElem") technology
-         li(v-if="$route.path !== '/portfolio'"): nuxt-link(to='/portfolio') portfolio
-         li(v-if="$route.path !== '/resume'"): nuxt-link(to='/resume') resume
-         li(v-if="$route.path !== '/contact'"): nuxt-link(to='/contact') contact
-         //- li(v-if="user.isAuthenticated"): a(href='/app/logout') Sign Out
-         //- li(v-else): a(href='/app') Sign In
+         li(v-if="$route.path !== '/portfolio'"): NuxtLink(to='/portfolio') portfolio
+         li(v-if="$route.path !== '/resume'"): NuxtLink(to='/resume') resume
 
     aside(class="hidden sm:block")
       ul.list-none.flex
-        li
-          a(target="_blank" title="Facebook" href="https://www.facebook.com/justin.bellero")
-            i.fa.fa-facebook.fa-1x: span.hidden Facebook
         li
           a(target="_blank" title="Github" href="http://github.com/jbool24")
             i.fa.fa-github.fa-1x: span.hidden Github
@@ -32,9 +26,6 @@
         li
           a(target="_blank" title="Linkedin" href="http://www.linkedin.com/in/justinbellero")
             i.fa.fa-linkedin.fa-1x: span.hidden Linkedin
-        li
-          a(target="_blank" title="Twitter" href="http://www.twitter.com/jbool24")
-            i.fa.fa-twitter.fa-1x: span.hidden Twitter
 
     #nav-trigger(class="block md:hidden ml-4")
       button(:class="{hidden: !navOpen }" class="fixed inset-0 h-full w-full bg-black z-0", @click="clickNav" style="opacity:50%;")
@@ -42,55 +33,48 @@
 
     nav#nav-mobile(class="block md:hidden")
       ul(:class="{nav__open: navOpen}")
-        li.mx-10(v-if="$route.path !== '/'"): nuxt-link(to='/') home
+        li.mx-10(v-if="$route.path !== '/'"): NuxtLink(to='/') home
         li.mx-10: a(href='javascript:void(0);' data-id="about" @click="goToElem") about
         li.mx-10: a(href='javascript:void(0);' data-id="technology" @click="goToElem") technology
-        li.mx-10(v-if="$route.path !== '/portfolio'"): nuxt-link(to='/portfolio') portfolio
-        li.mx-10(v-if="$route.path !== '/resume'"): nuxt-link(to='/resume') resume
-        li.mx-10(v-if="$route.path !== '/contact'"): nuxt-link(to='/contact') contact
-        //- li(v-if="user.isAuthenticated"): a(href='/app/logout') Sign Out
-        //- li(v-else): a(href='/app') Sign In
+        li.mx-10(v-if="$route.path !== '/portfolio'"): NuxtLink(to='/portfolio') portfolio
+        li.mx-10(v-if="$route.path !== '/resume'"): NuxtLink(to='/resume') resume
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isNavOpen: this.$store.state.navbar.isOpen,
-      logoImg: null,
+<script setup>
+import { ref, computed } from 'vue'
+import useNavbarStore from '@/stores/navbar'
+const navbar = useNavbarStore()
+
+const logoImg = ref(null)
+
+const navOpen = computed(() => {
+  return navbar.isOpen
+})
+
+const clickNav = () => {
+  if (navbar.isOpen) {
+    navbar.close()
+  } else {
+    navbar.open()
+  }
+}
+
+const goToElem = (e) => {
+  e.preventDefault()
+  if (import.meta.client) {
+    if (this.$route.name !== 'index') {
+      this.$router.push(`/#${e.target.dataset.id}`)
+    } else {
+      const el = document.getElementById(e.target.dataset.id)
+      const { y: ypos } = el.getBoundingClientRect()
+      window.scrollTo({
+        top: ypos,
+        left: 0,
+        behavior: 'smooth',
+      })
     }
-  },
-  computed: {
-    navOpen() {
-      return this.$store.state.navbar.isOpen
-    },
-  },
-  methods: {
-    clickNav() {
-      if (this.$store.state.navbar.isOpen) {
-        this.$store.dispatch('navbar/close')
-      } else {
-        this.$store.dispatch('navbar/open')
-      }
-    },
-    goToElem(e) {
-      e.preventDefault()
-      if (process.client) {
-        if (this.$route.name !== 'index') {
-          this.$router.push(`/#${e.target.dataset.id}`)
-        } else {
-          const el = document.getElementById(e.target.dataset.id)
-          const { y: ypos } = el.getBoundingClientRect()
-          window.scrollTo({
-            top: ypos,
-            left: 0,
-            behavior: 'smooth',
-          })
-        }
-      }
-      if (this.$store.state.navbar.isOpen) this.$store.dispatch('navbar/close')
-    },
-  },
+  }
+  if (navbar.isOpen) navbar.close()
 }
 </script>
 
@@ -109,6 +93,7 @@ export default {
   i {
     color: #111;
   }
+
   nav#nav-main a {
     font-size: 13px;
     text-transform: uppercase;
@@ -161,15 +146,18 @@ export default {
     ul li a {
       color: #333;
     }
+
     a {
       display: block;
       padding: 12px 0;
       width: 100%;
       text-align: left;
+
       &:hover {
         background: #fafafa;
       }
     }
+
     ul {
       z-index: 9999;
       list-style-type: none;

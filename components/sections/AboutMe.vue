@@ -60,19 +60,14 @@ section#about(class="mt-20 px-4 lg:px-10")
 
     //-End Content Right Side
 
-    //- .col-3
-      //- img(src="images/dancer.jpg" alt="Dancer")
-
 //- End of Content Section
 
 </template>
 
-<script>
-export default {
-  computed: {
-    programmingSince: () => new Date(Date.now()).getFullYear() - new Date(2012),
-  },
-}
+<script setup>
+
+const programmingSince = computed(() => new Date(Date.now()).getFullYear() - new Date(2012));
+
 </script>
 
 <style lang="css" scoped></style>
