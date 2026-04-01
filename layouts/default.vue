@@ -32,6 +32,7 @@
 </template>
 <script setup>
 import { onMounted } from 'vue'
+import IndexHero from '~/components/sections/IndexHero.vue'
 
 const showScroller = ref(false);
 
