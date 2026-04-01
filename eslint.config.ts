@@ -3,7 +3,7 @@ import withNuxt from './.nuxt/eslint.config.mjs'
 export default withNuxt([
   // Your entire custom config array goes here
   {
-    files: ['**/*.js', '**/*.vue'],
+    files: ['**/*.js', '**/*.ts', '**/*.vue'],
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',

@@ -10,7 +10,7 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "clean": "nuxt cleanup",
-    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ignore-pattern .gitignore --ignore-pattern node_modules/ ."
   },
   "dependencies": {
     "@pinia/nuxt": "^0.9.0",
